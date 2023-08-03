@@ -472,4 +472,7 @@
          The default is false. -->
     <bool name="config_lidControlsSleep">true</bool>
 
+    <!-- If true, show multiuser switcher by default unless the user specifically disables it. -->
+    <bool name="config_showUserSwitcherByDefault">true</bool>
+
 </resources>
