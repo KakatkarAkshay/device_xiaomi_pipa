@@ -18,6 +18,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
 
 # Xiaomi Sepolicy
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
+    device/xiaomi/pipa/sepolicy/private/xiaomi/display \
     device/xiaomi/pipa/sepolicy/private/xiaomi/vibrator
 
 BOARD_VENDOR_SEPOLICY_DIRS += \
