@@ -358,3 +358,7 @@ PRODUCT_PACKAGES += \
 
 # QTI
 $(call inherit-product, device/qcom/common/common.mk)
+
+# XiaomiParts
+PRODUCT_PACKAGES += \
+    XiaomiParts
