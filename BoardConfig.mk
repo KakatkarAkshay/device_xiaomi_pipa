@@ -112,11 +112,12 @@ BOARD_KERNEL_CMDLINE := \
     service_locator.enable=1 \
     swiotlb=2048
 
+BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_OFFSET := 0x01000000
 
-KERNEL_DEFCONFIG := vendor/pipa_user_defconfig
+TARGET_KERNEL_CONFIG += vendor/pipa_user_defconfig
 
 KERNEL_LLVM_SUPPORT := true
 
@@ -147,8 +148,8 @@ TARGET_COPY_OUT_VENDOR := vendor
 BOARD_EROFS_COMPRESSOR := lz4
 BOARD_EROFS_PCLUSTER_SIZE := 262144
 
-# Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+# qcom/common
+include device/qcom/common/BoardConfigQcom.mk
 
 # Recovery
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true

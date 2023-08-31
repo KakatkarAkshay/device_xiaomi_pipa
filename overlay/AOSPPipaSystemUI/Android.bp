@@ -13,7 +13,7 @@
 // limitations under the License.
 
 runtime_resource_overlay {
-    name: "AOSPAPipaFrameworks",
+    name: "AOSPPipaSystemUI",
     sdk_version: "current",
     system_ext_specific: true,
 }

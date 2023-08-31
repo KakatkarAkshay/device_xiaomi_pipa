@@ -100,6 +100,9 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti.recovery \
     android.hardware.boot@1.2-service
 
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl
+
 # Camera
 PRODUCT_VENDOR_PROPERTIES += \
     camera.disable_zsl_mode=true
@@ -138,7 +141,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.display.sensortype=2 \
     vendor.display.qdcm.mode_combine=1
 
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+PRODUCT_ODM_PROPERTY_OVERRIDES += \
     ro.surface_flinger.set_idle_timer_ms=4000 \
     ro.surface_flinger.set_touch_timer_ms=4000 \
     ro.surface_flinger.set_display_power_timer_ms=1000 \
@@ -203,8 +206,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    AOSPAPipaFrameworks \
-    AOSPAPipaSystemUI \
+    AOSPPipaFrameworks \
+    AOSPPipaSystemUI \
     FrameworksRes23043RP34C \
     FrameworksResTarget \
     PipaFrameworks \
@@ -219,6 +222,8 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Platform
 TARGET_BOARD_PLATFORM := kona
+TARGET_HALS_VARIANT := sm8250
+TARGET_KERNEL_VERSION := 4.19
 
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
@@ -327,3 +332,6 @@ PRODUCT_COPY_FILES += \
 # WFD
 PRODUCT_PACKAGES += \
     libwfdaac_vendor:32
+
+# QTI
+$(call inherit-product, device/qcom/common/common.mk)
