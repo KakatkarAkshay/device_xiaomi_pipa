@@ -21,6 +21,8 @@
 #include <sys/_system_properties.h>
 #include <sys/sysinfo.h>
 
+#include <fs_mgr_dm_linear.h>
+
 using android::base::GetProperty;
 
 void property_override(char const prop[], char const value[], bool add = true) {
@@ -65,4 +67,12 @@ void vendor_load_properties() {
     }
 
     load_dalvikvm_properties();
+
+#ifdef __ANDROID_RECOVERY__
+    std::string buildtype = GetProperty("ro.build.type", "userdebug");
+    if (buildtype != "user") {
+        property_override("ro.debuggable", "1");
+        property_override("ro.adb.secure.recovery", "0");
+    }
+#endif
 }
