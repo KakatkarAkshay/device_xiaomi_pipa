@@ -45,6 +45,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.audio.misound.disable=true \
     persist.vendor.audio.ring.filter.mask=0 \
     ro.audio.monitorRotation=true \
+    ro.config.media_vol_steps=25 \
     ro.config.vc_call_vol_steps=11 \
     ro.vendor.audio.enhance.support=false \
     ro.vendor.audio.gain.support=true \
