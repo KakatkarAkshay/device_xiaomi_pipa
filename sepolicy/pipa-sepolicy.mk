@@ -18,16 +18,13 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
 
 # Xiaomi Sepolicy
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/xiaomi/pipa/sepolicy/private/xiaomi/display \
-    device/xiaomi/pipa/sepolicy/private/xiaomi/vibrator
+    device/xiaomi/pipa/sepolicy/private/xiaomi/display
 
 BOARD_VENDOR_SEPOLICY_DIRS += \
     device/xiaomi/pipa/sepolicy/vendor/xiaomi/audio \
-    device/xiaomi/pipa/sepolicy/vendor/xiaomi/bluetooth \
     device/xiaomi/pipa/sepolicy/vendor/xiaomi/battery \
+    device/xiaomi/pipa/sepolicy/vendor/xiaomi/bluetooth \
     device/xiaomi/pipa/sepolicy/vendor/xiaomi/camera \
-    device/xiaomi/pipa/sepolicy/vendor/xiaomi/fingerprint \
-    device/xiaomi/pipa/sepolicy/vendor/xiaomi/ir \
     device/xiaomi/pipa/sepolicy/vendor/xiaomi/modem \
     device/xiaomi/pipa/sepolicy/vendor/xiaomi/power_supply \
     device/xiaomi/pipa/sepolicy/vendor/xiaomi/sensors \
