@@ -14,10 +14,12 @@ LOCAL_OVERRIDES_PACKAGES := \
    CarrierServices \
    com.google.android.dialer.support \
    Dialer \
+   GoogleContacts \
    GoogleDialer \
    Messages \
    messaging \
-   Mms
+   Mms \
+   PrebuiltBugle
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_SRC_FILES := /dev/null
