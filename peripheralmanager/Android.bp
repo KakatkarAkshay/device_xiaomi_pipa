@@ -21,7 +21,8 @@ android_app {
         "androidx.preference_preference",
     ],
     required: [
-        "xiaomi-pen"
+        "xiaomi-pen",
+        "xiaomi-keyboard"
     ],
 }
 
@@ -30,5 +31,19 @@ cc_binary {
     vendor: true,
     srcs: [
         "xiaomi-pen.cpp",
+    ],
+}
+
+cc_binary {
+    name: "xiaomi-keyboard",
+    vendor: true,
+    srcs: [
+        "xiaomi-keyboard.cpp",
+    ],
+
+    shared_libs: [
+        "libcutils",
+        "liblog",
+        "libsensorndkbridge",
     ],
 }
